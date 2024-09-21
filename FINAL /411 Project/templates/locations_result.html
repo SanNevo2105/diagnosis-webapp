@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Results</title>
+</head>
+<body>
+    <h1>Top 5 Symptoms in Your Area for {{ symptom_name }}</h1>
+    <h2>Top Five Symptoms:</h2>
+    <ul>
+        {% for symptom, occurrence in top_five_symptoms %}
+            <li>{{ symptom }} - {{ occurrence }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

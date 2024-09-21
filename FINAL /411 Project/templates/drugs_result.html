@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drugs Information</title>
+</head>
+<body>
+    <h1>Drugs Information</h1>
+    <h2>Drug Information:</h2>
+    <ul>
+        {% for info in drug_info %}
+            <li>{{ info }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Drug Reviews:</h2>
+    <ul>
+        {% for review in drug_reviews %}
+            <li>{{ review }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Substitute Drugs:</h2>
+    <ul>
+        {% for substitute in substitute_drugs %}
+            <li>{{ substitute }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suggested Disease</title>
+</head>
+<body>
+
+<h1>Suggested Disease</h1>
+{% if suggested_disease %}
+    <p>{{ suggested_disease }}</p>
+    {% if symptom_percentages %}
+        <p>Symptom Match Percentage: {{ symptom_percentages }}%</p>
+    {% endif %}
+{% else %}
+    <p>No disease suggested.</p>
+{% endif %}
+
+</body>
+</html>

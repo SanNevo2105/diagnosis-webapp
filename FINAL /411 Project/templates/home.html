@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WELCOME TO QUICK+</title>
+    <style>
+        /* Style the navigation bar */
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        /* Style the links inside the navigation bar */
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        /* Change color on hover */
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="{{ url_for('home_page') }}">Home</a>
+    <a href="{{ url_for('symptoms_input_page') }}">Enter Symptoms</a>
+    <a href="{{ url_for('diseases_input_page') }}">Enter Diseases</a>
+    <a href="{{ url_for('locations_input_page') }}">Location</a>
+    <a href="{{ url_for('drugs_input_page') }}">Drugs Information</a>
+</div>
+        
+
+<h1>WELCOME TO QUICK+, your medical decision assistant!</h1>
+<p>QUICK+ allows you to easily search up information about many diseases, as well as input your symptoms to find out what diseases you may have through a ML model that links symptoms to most likely disease!</p>
+<p>Finally, you can also see what diseases and symptoms are prevalent in your area and better take precautions against them!</p>
+<p>To begin using the application, select one of the following three options:</p>
+<ol>
+    <li>Find out about a disease!</li>
+    <li>Input your symptoms to see what you have!</li>
+    <li>Learn about prevalent symptoms in your area!</li>
+</ol>
+<p>Thank you for trying out QUICK+! Hope you get well soon!</p>
+
+</body>
+</html>

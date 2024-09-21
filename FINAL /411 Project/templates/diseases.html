@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Diseases</title>
+    <style>
+        /* Style the navigation bar */
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        /* Style the links inside the navigation bar */
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        /* Change color on hover */
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="{{ url_for('home_page') }}">Home</a>
+    <a href="{{ url_for('symptoms_input_page') }}">Enter Symptoms</a>
+    <a href="{{ url_for('diseases_input_page') }}">Enter Diseases</a>
+    <a href="{{ url_for('locations_input_page') }}">Location</a>
+    <a href="{{ url_for('drugs_input_page') }}">Drugs Information</a>
+</div>
+        
+
+<h1>Enter Diseases</h1>
+<form action="/submit_diseases" method="post">
+    <label for="diseases">Diseases:</label><br>
+    <textarea id="diseases" name="diseases" rows="4" cols="50"></textarea><br>
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

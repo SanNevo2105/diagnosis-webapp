@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Information</title>
+</head>
+<body>
+
+<h1>Disease Information</h1>
+{% if disease_info %}
+    <h2>{{ disease_info[0] }}</h2>
+    <p>{{ disease_info[1] }}</p>
+{% else %}
+    <p>No information found</p>
+{% endif %}
+
+<h2>Top Five Drugs</h2>
+{% if top_drugs %}
+    <ul>
+        {% for drug in top_drugs %}
+            <li>{{ drug }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No information found</p>
+{% endif %}
+
+</body>
+</html>
